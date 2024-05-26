@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+:root {
+    --primary: #424656;
+    --secondary-100: #E6EFFF;
+    --secondary-500: #B2B9D7;
+    --secondary-900: #A7AABD;
+    --accent-gold: #D5A418;
+    --accent-aqua: #136e79;
+    --sans: "Comfortaa", sans-serif;
+    --serif: Garamond, serif;
+    --hero-size: clamp(20vw, 300px, 40vw);
+    --nav-height: 7.5vh;
+    font-family: var(--sans);
+}
+
+body {
+    background-image: linear-gradient(azure, var(--secondary-100), azure);
+    min-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav, footer {
+    width: 100vw;
+    height: var(--nav-height);
+    background-color: var(--primary);
+    color: var(--secondary-100);
+    text-align: center;
+}
+nav > ul {
+    list-style: none;
+    padding-left:0;
+}
+nav > ul > li > a, footer > p > a {
+    text-decoration: none;
+    color: var(--secondary-500);
+    font-weight: 700;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--nav-height));
+}
+main {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    gap: 5vw;
+    min-height: calc(100vh - var(--nav-height));
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 6rem;
+    margin: 0.75rem;
+}
+h2 {
+    font-size: 3rem;
+    color: var(--accent-aqua);
+    margin: inherit;
+    padding: inherit;
+}
+h3 {
+    color: var(--accent-gold);
+    font-size: 2rem;
+}
+h4 {
+    font-family: var(--serif);
+}
+.hero {
+    height: var(--hero-size);
+    width: var(--hero-size);
+    filter: drop-shadow(0 1vh 2vw var(--primary));
+}
+.grayscale-100 {
+    filter: drop-shadow(0 1vh 2vw var(--primary)) grayscale(1);
+}
