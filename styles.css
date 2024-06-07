@@ -42,6 +42,14 @@ nav > ul > li > a, footer > p > a {
     text-decoration: none;
     color: var(--secondary-500);
     font-weight: 700;
+    transition: all ease-in-out 200ms;
+}
+nav > ul > li > a:hover, footer > p > a:hover {
+    color: var(--secondary-900);
+    transition: all ease-in-out 200ms;
+}
+nav > ul > li > a:active, footer > p > a:active {
+    color: var(--secondary-100);
 }
 header {
     display: flex;
@@ -83,4 +91,16 @@ h4 {
 }
 .grayscale-100 {
     filter: drop-shadow(0 1vh 2vw var(--primary)) grayscale(1);
+}
+
+.observable {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 650ms ease-in-out 150ms;
+}
+  
+.observable.observed {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 650ms ease-in-out 150ms;
 }
